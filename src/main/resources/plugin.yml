@@ -1,0 +1,55 @@
+# HopperFilterX - plugin.yml
+# Copyright (C) 2025 MrH00k
+# Licensed under GPL-3.0-only
+# https://www.gnu.org/licenses/gpl-3.0.txt
+#
+# This file is part of HopperFilterX, a plugin for managing hopper item filtering in Minecraft.
+
+main: ${PACKAGE}.Main
+name: ${NAME}
+version: "${VERSION}"
+api-version: "1.21"
+author: MrH00k
+description: HopperFilterX lets you filter what hoppers can pick up using a simple in-game GUI — adding smart item control to vanilla mechanics without breaking them.
+commands:
+  hopper:
+    description: "HopperFilterX command for managing filtered hoppers"
+    aliases: [hfilter, hf]
+    usage: |
+      /hopper give <player> [amount]
+      /hopper remove <player> <uuid>
+      /hopper list
+      /hopper list <player>
+      /hopper addperm <player> [uuid]
+      /hopper removeperm <player> [uuid]
+permissions:
+  hopperfilterx.give:
+    description: Permission to give filtered hoppers to players
+    default: op
+  hopperfilterx.use:
+    description: Permission to use filtered hoppers
+    default: true
+  hopperfilterx.*:
+    description: Grants all HopperFilterX permissions
+    default: false
+    children:
+      hopperfilterx.give: true
+      hopperfilterx.use: true
+      hopperfilterx.reload: true
+      hopperfilterx.remove: true
+      hopperfilterx.list: true
+  hopperfilterx.reload:
+    description: Permission to reload plugin configuration and messages
+    default: op
+  hopperfilterx.remove:
+    description: Permission to remove a filtered hopper from a player or the world using /hopper remove
+    default: op
+  hopperfilterx.list:
+    description: Permission to list your own filtered hoppers using /hopper list
+    default: true
+  hopperfilterx.addperm:
+    description: Permission to add permissions to players for filtered hoppers using /hopper addperm
+    default: true
+  hopperfilterx.removeperm:
+    description: Permission to remove permissions from players for filtered hoppers using /hopper removeperm
+    default: true

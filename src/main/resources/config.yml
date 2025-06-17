@@ -1,0 +1,12 @@
+# HopperFilterX Configuration File
+# Copyright (C) 2025 MrH00k
+# Licensed under GPL-3.0-only
+# https://www.gnu.org/licenses/gpl-3.0.txt
+#
+# Default configuration file for HopperFilterX
+
+# Debug Configuration
+debug:
+  # Enable/disable debug mode for complete logging output
+  # When enabled, all debug messages will be displayed
+  enabled: false

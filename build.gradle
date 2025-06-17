@@ -1,0 +1,113 @@
+import java.text.SimpleDateFormat
+
+plugins {
+    id "com.github.spotbugs" version "6.1.11"
+    id 'com.gradleup.shadow' version '8.3.6'
+    id 'com.diffplug.spotless' version '6.25.0'
+    id 'java'
+}
+
+group = "com.mrh00k.hopperfilterx"
+
+static def getTime() {
+    SimpleDateFormat sdf = new SimpleDateFormat("yyMMdd-HHmm")
+    sdf.setTimeZone(TimeZone.getTimeZone("UTC"))
+    return sdf.format(new Date()).toString()
+}
+
+// Set version to version property if supplied
+String shortVersion = "0.1.1-BETA"
+if (hasProperty('ver')) {
+    shortVersion = ver.trim()
+    if (shortVersion.toLowerCase().startsWith("v")) {
+        shortVersion = shortVersion.substring(1)
+    }
+    shortVersion = shortVersion.toUpperCase()
+}
+
+if (shortVersion == null || shortVersion == "") {
+    version = getTime() + "-SNAPSHOT"
+} else if (shortVersion.contains("-RC-")) {
+    version = shortVersion.replace("-RC-", "-SNAPSHOT-")
+} else if (shortVersion.contains("-BETA")) {
+    version = shortVersion // ya viene marcado
+} else if (shortVersion.endsWith("B")) {
+    version = shortVersion.substring(0, shortVersion.length() - 1) + "-BETA"
+} else {
+    version = shortVersion
+}
+
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    maven {
+        name = 'spigotmc'
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+    }
+    
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.21.5-R0.1-SNAPSHOT'
+    compileOnly 'com.github.spotbugs:spotbugs-annotations:4.9.3'
+    implementation 'org.xerial:sqlite-jdbc:3.41.2.1'
+    spotbugsPlugins 'com.h3xstream.findsecbugs:findsecbugs-plugin:1.14.0'
+}
+
+processResources {
+    filesMatching("**/plugin.yml") {
+        expand ( NAME: rootProject.name, VERSION: version, PACKAGE: rootProject.group.toString() )
+    }
+}
+
+tasks.withType(com.github.spotbugs.snom.SpotBugsTask).configureEach {
+    reports.create("html") {
+        required = true
+    }
+    reports.create("xml") {
+        required = false
+    }
+}
+
+shadowJar {
+    archiveClassifier.set('')
+    minimize()
+}
+
+// Disable jar and replace with shadowJar
+jar.enabled = false
+assemble.dependsOn(shadowJar)
+
+tasks.register('printProjectName') {
+    doLast {
+        println rootProject.name
+    }
+}
+
+tasks.register('release') {
+    dependsOn build
+
+    doLast {
+        if (!version.endsWith("-SNAPSHOT")) {
+            // Rename final JAR to trim off version information
+            shadowJar.archiveFile.get().getAsFile()
+                    .renameTo(layout.buildDirectory.get().toString() + File.separator + 'libs' + File.separator
+                            + rootProject.name + '.jar')
+        }
+    }
+}
+
+tasks.named('build').configure {
+    dependsOn 'spotlessApply'
+}
+
+spotless {
+    java {
+        googleJavaFormat('1.17.0')
+    }
+}

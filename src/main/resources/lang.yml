@@ -1,0 +1,370 @@
+# HopperFilterX Internationalization File
+# Copyright (C) 2025 MrH00k
+# Licensed under GPL-3.0-only
+# https://www.gnu.org/licenses/gpl-3.0.txt
+#
+# Default language: English (en_us)
+
+en_us:
+  # General
+  prefix: "&8[&6HopperFilterX&8]&r"
+
+  # Permissions
+  no-permission: "&cYou don't have permission to use this command."
+
+  # Commands
+  command:
+    usage: "&eUse: /hopper give <player> [amount]"
+    unknown: "&cUnknown command. Use: /hopper give <player> [amount]"
+    usage-give: "&cUsage: /hopper give <player> [amount]"
+    invalid-amount: "&cAmount must be greater than 0."
+    amount-too-high: "&cAmount must be less than or equal to 64."
+    invalid-number: "&cInvalid amount."
+    player-not-found: "&cPlayer not found."
+    give-success: "&bGave {amount} filtered hopper(s) to {player}."
+    give-received: "&aYou received {amount} filtered hopper(s) from {sender}."
+    reload-success: "&aPlugin reloaded successfully."
+    usage-remove: "&cUsage: /hopper remove <player> <uuid>"
+    remove-success: "&aRemoved hopper with UUID {uuid} from {player}."
+    remove-notify: "&cYour filtered hopper with UUID {uuid} was removed by an administrator."
+    remove-not-found: "&cNo filtered hopper with UUID {uuid} found for {player}."
+    remove-no-hoppers: "&cNo filtered hoppers found for {player}."
+    usage-list: "&eUse: /hopper list <player>"
+    list-header: "&bFiltered hoppers of {player}:"
+    list-no-hoppers: "&cNo filtered hoppers found for {player}."
+    list-no-hoppers-user: "&cNo filtered hoppers belonging to you were found."
+    list-entry-placed: "&6State: Placed in {world} @ {x},{y},{z}"
+    list-entry-inventory: "&bState: In inventory"
+    click-to-copy: "&7Click to copy"
+    remove-success-all: "&aRemoved all filtered hoppers for {player}."
+    remove-notify-all: "&cAll your filtered hoppers were removed by an administrator."
+    usage-addperm: "&eUse: /hopper addperm <player> [uuid]"
+    addperm-success-uuid: "&aPlayer {player} now has access to your filter {uuid}."
+    addperm-success-all: "&aPlayer {player} now has access to all your filters."
+    addperm-already-exists: "&eThat player already has permission."
+    addperm-no-hoppers: "&cNo filtered hoppers belonging to you were found."
+    usage-removeperm: "&eUse: /hopper removeperm <player> [uuid]"
+    removeperm-success-uuid: "&aPlayer {player} no longer has access to your filter {uuid}."
+    removeperm-success-all: "&aPlayer {player} no longer has access to any of your filters."
+    removeperm-not-exists: "&eThat player does not have permission."
+    removeperm-no-hoppers: "&cNo filtered hoppers belonging to you were found."
+    self-permission-denied: "&cYou cannot give permissions to yourself."
+    self-remove-denied: "&cYou cannot remove permissions from yourself."
+  # Hopper interactions
+  hopper:
+    placed: "&aFiltered hopper placed! Shift + Right-click to configure filters."
+    broken: "&eFiltered hopper broken! Metadata preserved."
+    broken.survival: "&eFiltered hopper broken in survival! You can place it back to restore its data."
+    broken.creative: "&cFiltered hopper removed in creative mode! Data permanently deleted."
+    replaced: "&aFiltered hopper re-placed! Previous configuration restored."
+    config-opening: "&eOpening filter configuration..."
+    not-owner: "&cYou are not the owner of this filtered hopper."
+    filter-denied: "&cThis hopper has a filter, you cannot insert this item."
+  # Error messages
+  error:
+    give-failed: "&cFailed to give hopper to player {player}."
+    unexpected: "&cAn unexpected error occurred: {error}"
+    uuid-not-found: "&cUUID {uuid} does not exist in the database."
+    uuid-not-owned: "&cUUID {uuid} does not belong to player {player}."
+
+  # Version update messages
+  version:
+    update-available: "&eA new version of HopperFilterX is available! Current: &c{current} &e→ Latest: &a{latest}"
+
+# Spanish translations
+es_es:
+  prefix: "&8[&6HopperFilterX&8]&r"  # Spanish prefix same as English
+
+  no-permission: "&cNo tienes permiso para usar este comando."
+
+  command:
+    usage: "&eUsa: /hopper give <player> [cantidad]"
+    unknown: "&cComando desconocido. Usa: /hopper give <player> [cantidad]"
+    usage-give: "&cUso: /hopper give <player> [cantidad]"
+    invalid-amount: "&cLa cantidad debe ser mayor que 0."
+    amount-too-high: "&cLa cantidad debe ser como máximo 64."
+    invalid-number: "&cCantidad inválida."
+    player-not-found: "&cJugador no encontrado."
+    give-success: "&bHas dado {amount} filtro(s) de tolva a {player}."
+    give-received: "&aHas recibido {amount} filtro(s) de tolva de {sender}."
+    reload-success: "&aPlugin recargado con éxito."
+    usage-remove: "&cUso: /hopper remove <player> <uuid>"
+    remove-success: "&aTolva filtrada con UUID {uuid} eliminada de {player}."
+    remove-notify: "&cUn administrador eliminó tu tolva filtrada con UUID {uuid}."
+    remove-not-found: "&cNo se encontró ninguna tolva filtrada con UUID {uuid} para {player}."
+    remove-no-hoppers: "&cNo se encontraron tolvas filtradas para {player}."
+    usage-list: "&eUsa: /hopper list <player>"
+    list-header: "&bTolvas filtradas de {player}:"
+    list-no-hoppers: "&cNo se encontraron tolvas filtradas para {player}."
+    list-no-hoppers-user: "&cNo se encontraron tolvas filtradas que te pertenezcan."
+    list-entry-placed: "&6Estado: Colocado en {world} @ {x},{y},{z}"
+    list-entry-inventory: "&bEstado: En inventario"
+    click-to-copy: "&7Haz clic para copiar"
+    remove-success-all: "&aSe eliminaron todas las tolvas filtradas de {player}."
+    remove-notify-all: "&cUn administrador eliminó todas tus tolvas filtradas."
+    usage-addperm: "&eUsa: /hopper addperm <player> [uuid]"
+    addperm-success-uuid: "&aEl jugador {player} ahora tiene acceso a tu filtro {uuid}."
+    addperm-success-all: "&aEl jugador {player} ahora tiene acceso a todos tus filtros."
+    addperm-already-exists: "&eEse jugador ya tiene permiso."
+    addperm-no-hoppers: "&cNo se encontraron tolvas filtradas que te pertenezcan."
+    usage-removeperm: "&eUsa: /hopper removeperm <jugador> [uuid]"
+    removeperm-success-uuid: "&aEl jugador {player} ya no tiene acceso a tu filtro {uuid}."
+    removeperm-success-all: "&aEl jugador {player} ya no tiene acceso a ninguno de tus filtros."
+    removeperm-not-exists: "&eEse jugador no tiene permiso."
+    removeperm-no-hoppers: "&cNo se encontraron tolvas filtradas que te pertenezcan."
+    self-permission-denied: "&cNo puedes darte permisos a ti mismo."
+    self-remove-denied: "&cNo puedes removerte permisos a ti mismo."
+  hopper:
+    placed: "&aFiltro de tolva colocado! Shift + Clic derecho para configurar filtros."
+    broken: "&eTolva filtrada rota! Metadatos preservados."
+    broken.survival: "&eTolva filtrada rota en supervivencia! Puedes colocarla de nuevo para restaurar sus datos."
+    broken.creative: "&cTolva filtrada eliminada en modo creativo! Datos eliminados permanentemente."
+    replaced: "&aFiltro de tolva recolocado! Configuración anterior restaurada."
+    config-opening: "&eAbriendo configuración de filtros..."
+    not-owner: "&cNo eres el dueño de esta tolva filtrada."
+    filter-denied: "&cEste hopper tiene filtro, no puedes meter este item."
+  error:
+    give-failed: "&cError al dar la tolva al jugador {player}."
+    unexpected: "&cOcurrió un error inesperado: {error}"
+    uuid-not-found: "&cEl UUID {uuid} no existe en la base de datos."
+    uuid-not-owned: "&cEl UUID {uuid} no pertenece al jugador {player}."
+
+  # Version update messages
+  version:
+    update-available: "&e¡Una nueva versión de HopperFilterX está disponible! Actual: &c{current} &e→ Última: &a{latest}"
+
+# German translations
+de_de:
+  prefix: "&8[&6HopperFilterX&8]&r"
+
+  no-permission: "&cDu hast keine Berechtigung, diesen Befehl zu benutzen."
+
+  command:
+    usage: "&eBenutze: /hopper give <Spieler> [Anzahl]"
+    unknown: "&cUnbekannter Befehl. Benutze: /hopper give <Spieler> [Anzahl]"
+    usage-give: "&cVerwendung: /hopper give <Spieler> [Anzahl]"
+    invalid-amount: "&cMenge muss größer als 0 sein."
+    amount-too-high: "&cMenge darf höchstens 64 sein."
+    invalid-number: "&cUngültige Zahl."
+    player-not-found: "&cSpieler nicht gefunden."
+    give-success: "&bDu hast {amount} gefilterte Trichter an {player} gegeben."
+    give-received: "&aDu hast {amount} gefilterte Trichter von {sender} erhalten."
+    reload-success: "&aPlugin erfolgreich neu geladen."
+    usage-remove: "&cVerwendung: /hopper remove <Spieler> <UUID>"
+    remove-success: "&aGefilterter Trichter mit UUID {uuid} von {player} entfernt."
+    remove-notify: "&cEin Administrator hat deinen gefilterten Trichter mit UUID {uuid} entfernt."
+    remove-not-found: "&cKein gefilterter Trichter mit UUID {uuid} für {player} gefunden."
+    remove-no-hoppers: "&cKeine gefilterten Trichter für {player} gefunden."
+    usage-list: "&eVerwende: /hopper list <Spieler>"
+    list-header: "&bGefilterte Trichter von {player}:"
+    list-no-hoppers: "&cKeine gefilterten Trichter für {player} gefunden."
+    list-no-hoppers-user: "&cKeine gefilterten Trichter gefunden, die dir gehören."
+    list-entry-placed: "&6Status: Platziert in {world} @ {x},{y},{z}"
+    list-entry-inventory: "&bStatus: Im Inventar"
+    click-to-copy: "&7Zum Kopieren klicken"
+    remove-success-all: "&aAlle gefilterten Trichter von {player} wurden entfernt."
+    remove-notify-all: "&cEin Administrator hat alle deine gefilterten Trichter entfernt."
+    usage-addperm: "&eBenutze: /hopper addperm <Spieler> [uuid]"
+    addperm-success-uuid: "&aSpieler {player} hat jetzt Zugriff auf deinen Filter {uuid}."
+    addperm-success-all: "&aSpieler {player} hat jetzt Zugriff auf alle deine Filter."
+    addperm-already-exists: "&eDieser Spieler hat bereits Berechtigung."
+    addperm-no-hoppers: "&cEs wurden keine gefilterten Trichter gefunden, die dir gehören."
+    usage-removeperm: "&eBenutze: /hopper removeperm <Spieler> [uuid]"
+    removeperm-success-uuid: "&aSpieler {player} hat jetzt keinen Zugriff mehr auf deinen Filter {uuid}."
+    removeperm-success-all: "&aSpieler {player} hat jetzt keinen Zugriff mehr auf deine Filter."
+    removeperm-not-exists: "&eDieser Spieler hat keine Berechtigung."
+    removeperm-no-hoppers: "&cEs wurden keine gefilterten Trichter gefunden, die dir gehören."
+    self-permission-denied: "&cDu kannst dir selbst keine Berechtigungen geben."
+    self-remove-denied: "&cDu kannst dir selbst keine Berechtigungen entziehen."
+  hopper:
+    placed: "&aGefilterter Trichter platziert! Shift + Rechtsklick zum Konfigurieren der Filter."
+    broken: "&eGefilterter Trichter zerstört! Metadaten erhalten."
+    config-opening: "&eFilterkonfiguration wird geöffnet..."
+    not-owner: "&cDu bist nicht der Besitzer dieses gefilterten Trichters."
+    filter-denied: "&cDieser Trichter hat einen Filter, du kannst dieses Item nicht einlegen."
+  error:
+    give-failed: "&cFehler beim Geben des Trichters an Spieler {player}."
+    unexpected: "&cEin unerwarteter Fehler ist aufgetreten: {error}"
+    uuid-not-found: "&cUUID {uuid} existiert nicht in der Datenbank."
+    uuid-not-owned: "&cUUID {uuid} gehört nicht zu Spieler {player}."
+
+  # Version update messages
+  version:
+    update-available: "&eEine neue Version von HopperFilterX ist verfügbar! Aktuell: &c{current} &e→ Neueste: &a{latest}"
+
+# French translations
+fr_fr:
+  prefix: "&8[&6HopperFilterX&8]&r"
+
+  no-permission: "&cVous n'avez pas la permission d'utiliser cette commande."
+
+  command:
+    usage: "&eUtilisez : /hopper give <joueur> [quantité]"
+    unknown: "&cCommande inconnue. Utilisez : /hopper give <joueur> [quantité]"
+    usage-give: "&cUtilisation : /hopper give <joueur> [quantité]"
+    invalid-amount: "&cLa quantité doit être supérieure à 0."
+    amount-too-high: "&cLa quantité doit être inférieure ou égale à 64."
+    invalid-number: "&cQuantité invalide."
+    player-not-found: "&cJoueur introuvable."
+    give-success: "&bVous avez donné {amount} entonnoir(s) filtré(s) à {player}."
+    give-received: "&aVous avez reçu {amount} entonnoir(s) filtré(s) de {sender}."
+    reload-success: "&aPlugin rechargé avec succès."
+    usage-remove: "&cUtilisation : /hopper remove <joueur> <uuid>"
+    remove-success: "&aEntonnoir filtré avec UUID {uuid} supprimé de {player}."
+    remove-notify: "&cUn administrateur a supprimé votre entonnoir filtré avec UUID {uuid}."
+    remove-not-found: "&cAucun entonnoir filtré avec UUID {uuid} trouvé pour {player}."
+    remove-no-hoppers: "&cAucun entonnoir filtré trouvé pour {player}."
+    usage-list: "&eUtilisez : /hopper list <joueur>"
+    list-header: "&bEntonnoirs filtrés de {player} :"
+    list-no-hoppers: "&cAucun entonnoir filtré trouvé pour {player}."
+    list-no-hoppers-user: "&cAucun entonnoir filtré ne vous appartient."
+    list-entry-placed: "&6État: Placés dans {world} @ {x},{y},{z}"
+    list-entry-inventory: "&bÉtat: Dans l'inventaire"
+    click-to-copy: "&7Cliquez pour copier"
+    remove-success-all: "&aTous les entonnoirs filtrés de {player} ont été supprimés."
+    remove-notify-all: "&cUn administrateur a supprimé tous vos entonnoirs filtrés."
+    usage-addperm: "&eUtilisez : /hopper addperm <joueur> [uuid]"
+    addperm-success-uuid: "&aLe joueur {player} a maintenant accès à votre filtre {uuid}."
+    addperm-success-all: "&aLe joueur {player} a maintenant accès à tous vos filtres."
+    addperm-already-exists: "&eCe joueur a déjà la permission."
+    addperm-no-hoppers: "&cAucun entonnoir filtré ne vous appartient."
+    usage-removeperm: "&eUtilisez : /hopper removeperm <joueur> [uuid]"
+    removeperm-success-uuid: "&aLe joueur {player} n'a maintenant plus accès à votre filtre {uuid}."
+    removeperm-success-all: "&aLe joueur {player} n'a maintenant plus accès à aucun de vos filtres."
+    removeperm-not-exists: "&eCe joueur n'a pas la permission."
+    removeperm-no-hoppers: "&cAucun entonnoir filtré ne vous appartient."
+    self-permission-denied: "&cVous ne pouvez pas vous donner des permissions."
+    self-remove-denied: "&cVous ne pouvez pas vous retirer des permissions."
+  hopper:
+    placed: "&aEntonnoir filtré placé ! Shift + Clic droit pour configurer les filtres."
+    broken: "&eEntonnoir filtré cassé ! Métadonnées préservées."
+    config-opening: "&eOuverture de la configuration des filtres..."
+    not-owner: "&cVous n'êtes pas le propriétaire de cet entonnoir filtré."
+    filter-denied: "&cCet entonnoir a un filtre, vous ne pouvez pas insérer cet objet."
+  error:
+    give-failed: "&cÉchec du don d'entonnoir au joueur {player}."
+    unexpected: "&cUne erreur inattendue s'est produite : {error}"
+    uuid-not-found: "&cL'UUID {uuid} n'existe pas dans la base de données."
+    uuid-not-owned: "&cL'UUID {uuid} n'appartient pas au joueur {player}."
+
+  # Version update messages
+  version:
+    update-available: "&eUne nouvelle version de HopperFilterX est disponible ! Actuelle : &c{current} &e→ Dernière : &a{latest}"
+
+# Russian translations
+ru_ru:
+  prefix: "&8[&6HopperFilterX&8]&r"
+
+  no-permission: "&cУ вас нет прав для использования этой команды."
+
+  command:
+    usage: "&eИспользуйте: /hopper give <игрок> [количество]"
+    unknown: "&cНеизвестная команда. Используйте: /hopper give <игрок> [количество]"
+    usage-give: "&cИспользование: /hopper give <игрок> [количество]"
+    invalid-amount: "&cКоличество должно быть больше 0."
+    amount-too-high: "&cКоличество должно быть не более 64."
+    invalid-number: "&cНеверное число."
+    player-not-found: "&cИгрок не найден."
+    give-success: "&bВы выдали {amount} отфильтрованных воронок игроку {player}."
+    give-received: "&aВы получили {amount} отфильтрованных воронок от {sender}."
+    reload-success: "&aПлагин успешно перезагружен."
+    usage-remove: "&cИспользование: /hopper remove <игрок> <uuid>"
+    remove-success: "&aФильтрованная воронка с UUID {uuid} удалена у {player}."
+    remove-notify: "&cАдминистратор удалил вашу фильтрованную воронку с UUID {uuid}."
+    remove-not-found: "&cФильтрованная воронка с UUID {uuid} для {player} не найдена."
+    remove-no-hoppers: "&cНе найдены отфильтрованные воронки для {player}."
+    usage-list: "&eИспользуйте: /hopper list <игрок>"
+    list-header: "&bОтфильтрованные воронки игрока {player}:"
+    list-no-hoppers: "&cНе найдены отфильтрованные воронки для {player}."
+    list-no-hoppers-user: "&cНе найдены отфильтрованные воронки, принадлежащие вам."
+    list-entry-placed: "&6Статус: Размещено в {world} @ {x},{y},{z}"
+    list-entry-inventory: "&bСтатус: В инвентаре"
+    click-to-copy: "&7Нажмите, чтобы скопировать"
+    remove-success-all: "&aВсе фильтрованные воронки игрока {player} были удалены."
+    remove-notify-all: "&cАдминистратор удалил все ваши фильтрованные воронки."
+    usage-addperm: "&eИспользуйте: /hopper addperm <игрок> [uuid]"
+    addperm-success-uuid: "&aИгроку {player} теперь доступен ваш фильтр {uuid}."
+    addperm-success-all: "&aИгроку {player} теперь доступен ваш фильтр."
+    addperm-already-exists: "&eУ этого игрока уже есть разрешение."
+    addperm-no-hoppers: "&cНе найдено ни одной фильтрованной воронки, принадлежащей вам."
+    usage-removeperm: "&eИспользуйте: /hopper removeperm <игрок> [uuid]"
+    removeperm-success-uuid: "&aИгроку {player} больше не доступен ваш фильтр {uuid}."
+    removeperm-success-all: "&aИгроку {player} больше не доступен ни один из ваших фильтров."
+    removeperm-not-exists: "&eУ этого игрока нет разрешения."
+    removeperm-no-hoppers: "&cНе найдено ни одной фильтрованной воронки, принадлежащей вам."
+    self-permission-denied: "&cВы не можете дать себе разрешения."
+    self-remove-denied: "&cВы не можете убрать разрешения у себя."
+  hopper:
+    placed: "&aФильтрованная воронка размещена! Shift + ПКМ для настройки фильтров."
+    broken: "&eФильтрованная воронка сломана! Метаданные сохранены."
+    config-opening: "&eОткрытие настройки фильтров..."
+    not-owner: "&cВы не являетесь владельцем этой фильтрованной воронки."
+    filter-denied: "&cУ этого воронки есть фильтр, вы не можете поместить этот предмет."
+  error:
+    give-failed: "&cНе удалось выдать воронку игроку {player}."
+    unexpected: "&cПроизошла неожиданная ошибка: {error}"
+    uuid-not-found: "&cUUID {uuid} не существует в базе данных."
+    uuid-not-owned: "&cUUID {uuid} не принадлежит игроку {player}."
+
+  # Version update messages
+  version:
+    update-available: "&eДоступна новая версия HopperFilterX! Текущая: &c{current} &e→ Последняя: &a{latest}"
+
+# Chinese translations
+zh_cn:
+  prefix: "&8[&6HopperFilterX&8]&r"
+
+  no-permission: "&c您没有使用此命令的权限。"
+
+  command:
+    usage: "&e使用: /hopper give <玩家> [数量]"
+    unknown: "&c未知命令。使用: /hopper give <玩家> [数量]"
+    usage-give: "&c用法: /hopper give <玩家> [数量]"
+    invalid-amount: "&c数量必须大于0。"
+    amount-too-high: "&c数量必须小于或等于64。"
+    invalid-number: "&c无效的数量。"
+    player-not-found: "&c未找到玩家。"
+    give-success: "&b已给予 {player} {amount} 个可过滤的漏斗。"
+    give-received: "&a您已从 {sender} 收到 {amount} 个可过滤的漏斗。"
+    reload-success: "&a插件已成功重新加载。"
+    usage-remove: "&c用法: /hopper remove <玩家> <uuid>"
+    remove-success: "&a已移除 {player} 的可过滤漏斗，UUID 为 {uuid}。"
+    remove-notify: "&c管理员已移除你 UUID 为 {uuid} 的可过滤漏斗。"
+    remove-not-found: "&c未找到 {player} 的 UUID 为 {uuid} 的可过滤漏斗。"
+    remove-no-hoppers: "&c未找到 {player} 的过滤漏斗。"
+    usage-list: "&e使用: /hopper list <玩家>"
+    list-header: "&b{player} 的过滤漏斗："
+    list-no-hoppers: "&c未找到 {player} 的过滤漏斗。"
+    list-no-hoppers-user: "&c未找到属于您的过滤漏斗。"
+    list-entry-placed: "&6状态: 放置于 {world} @ {x},{y},{z}"
+    list-entry-inventory: "&b状态: 在背包中"
+    click-to-copy: "&7点击复制"
+    remove-success-all: "&a已移除 {player} 的所有可过滤漏斗。"
+    remove-notify-all: "&c管理员已移除你所有的可过滤漏斗。"
+    usage-addperm: "&e用法: /hopper addperm <玩家> [uuid]"
+    addperm-success-uuid: "&a玩家 {player} 现在可以使用你的过滤器 {uuid}."
+    addperm-success-all: "&a玩家 {player} 现在可以使用你的所有过滤器."
+    addperm-already-exists: "&e该玩家已经拥有权限."
+    addperm-no-hoppers: "&c未找到属于您的过滤漏斗。"
+    usage-removeperm: "&e用法: /hopper removeperm <玩家> [uuid]"
+    removeperm-success-uuid: "&a玩家 {player} 不再可以使用你的过滤器 {uuid}."
+    removeperm-success-all: "&a玩家 {player} 不再可以使用你的所有过滤器."
+    removeperm-not-exists: "&e该玩家没有权限."
+    removeperm-no-hoppers: "&c未找到属于您的过滤漏斗。"
+    self-permission-denied: "&c您不能给自己权限。"
+    self-remove-denied: "&c您不能移除自己权限。"
+  hopper:
+    placed: "&a可过滤的漏斗已放置！按住Shift并右键配置过滤器。"
+    broken: "&e可过滤的漏斗已破坏！元数据已保留。"
+    config-opening: "&e打开过滤器配置..."
+    not-owner: "&c您不是此可过滤漏斗的拥有者。"
+    filter-denied: "&c此漏斗有过滤器，您无法插入此物品。"
+  error:
+    give-failed: "&c未能将漏斗给予玩家 {player}."
+    unexpected: "&c发生了意外错误: {error}"
+    uuid-not-found: "&cUUID {uuid} 在数据库中不存在."
+    uuid-not-owned: "&cUUID {uuid} 不属于玩家 {player}."
+
+  # Version update messages
+  version:
+    update-available: "&eHopperFilterX 有新版本可用！当前版本：&c{current} &e→ 最新版本：&a{latest}"
