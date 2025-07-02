@@ -53,7 +53,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'org.spigotmc:spigot-api:1.21.6-R0.1-SNAPSHOT'
+    compileOnly 'org.spigotmc:spigot-api:1.21.7-R0.1-SNAPSHOT'
     compileOnly 'com.github.spotbugs:spotbugs-annotations:4.9.3'
     implementation 'org.xerial:sqlite-jdbc:3.41.2.1'
     spotbugsPlugins 'com.h3xstream.findsecbugs:findsecbugs-plugin:1.14.0'
